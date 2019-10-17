@@ -47,6 +47,7 @@ CHECKPOINT_NAME = './tmp/_retrain_checkpoint'
 FAKE_QUANT_OPS = ('FakeQuantWithMinMaxVars',
                   'FakeQuantWithMinMaxVarsPerChannel')
 
+STEPS = 100
 
 def create_image_lists(image_dir, testing_percentage, validation_percentage):
     if not tf.gfile.Exists(image_dir):
@@ -1087,7 +1088,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--how_many_training_steps',
         type=int,
-        default=100,
+        default=STEPS,
         help='How many training steps to run before ending.'
     )
     parser.add_argument(
