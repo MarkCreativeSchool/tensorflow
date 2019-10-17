@@ -2,3 +2,4 @@ images/
 tmp/
 !tmp/.gitkeep
 downloads/
+.idea/
